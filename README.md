@@ -7,18 +7,23 @@ webHDFS resource: https://hadoop.apache.org/docs/r1.0.4/webhdfs.html
 
 Curl Commands
 List a Directory : Submit a HTTPs GET request
+
 curl -k  -i  -u <DS_ID>:<PASSWORD>  "https://<HOST>:<PORT>/webhdfs/v1/<PATH>?op=LISTSTATUS"
 
 Get Home Directory : Submit a HTTPs GET request
+
 curl -k  -i  -u <DS_ID>:<PASSWORD>  "https://<HOST>:<PORT>/webhdfs/v1/<PATH>?op=GETHOMEDIRECTORY"
 
 Create and Write to a File: Submit a HTTPs PUT request
+
 curl -k -i -u -X PUT <DS_ID>:<PASSWORD>"http://<HOST>:<PORT>/webhdfs/v1/<PATH>?op=CREATE&overwrite=true
 
 Download a File: Submit a HTTPs GET request
+
 curl -k -i -u <DS_ID>:<PASSWORD>"http://<HOST>:<PORT>/webhdfs/v1/<PATH>?op=OPEN
 
 Delete a File: Submit a HTTPs DELETE request
+
 curl -k -i -u -X DELETE <DS_ID>:<PASSWORD>"http://<HOST>:<PORT>/webhdfs/v1/<PATH>?op=DELETE
 
 ## Java/Scala Client for WebHDFS REST API
