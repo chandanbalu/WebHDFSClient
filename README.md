@@ -1,30 +1,31 @@
 ## Web HDFS Client
+=================================
 WebHDFS is a Restful endpoint that allows you to interact with HDFS directly.
 
 You can use a multitude of clients with webHDFS, the challenge tends to be getting authentication working due to the client needing to negotiate kerberos on your behalf. It is possible to generate a token which can be used in place of kerberos if your client can't provide kerberos forwarding.
 
 webHDFS resource: https://hadoop.apache.org/docs/r1.0.4/webhdfs.html
 
-Curl Commands
-List a Directory : Submit a HTTPs GET request
+### Curl Commands
+- List a Directory : Submit a HTTPs GET request
 
-curl -k  -i  -u <DS_ID>:<PASSWORD>  "https://<HOST>:<PORT>/webhdfs/v1/<PATH>?op=LISTSTATUS"
+`curl -k  -i  -u <DS_ID>:<PASSWORD>  "https://<HOST>:<PORT>/webhdfs/v1/<PATH>?op=LISTSTATUS"`
 
-Get Home Directory : Submit a HTTPs GET request
+- Get Home Directory : Submit a HTTPs GET request
 
-curl -k  -i  -u <DS_ID>:<PASSWORD>  "https://<HOST>:<PORT>/webhdfs/v1/<PATH>?op=GETHOMEDIRECTORY"
+`curl -k  -i  -u <DS_ID>:<PASSWORD>  "https://<HOST>:<PORT>/webhdfs/v1/<PATH>?op=GETHOMEDIRECTORY"`
 
-Create and Write to a File: Submit a HTTPs PUT request
+- Create and Write to a File: Submit a HTTPs PUT request
 
-curl -k -i -u -X PUT <DS_ID>:<PASSWORD>"http://<HOST>:<PORT>/webhdfs/v1/<PATH>?op=CREATE&overwrite=true
+`curl -k -i -u -X PUT <DS_ID>:<PASSWORD>"http://<HOST>:<PORT>/webhdfs/v1/<PATH>?op=CREATE&overwrite=true`
 
-Download a File: Submit a HTTPs GET request
+- Download a File: Submit a HTTPs GET request
 
-curl -k -i -u <DS_ID>:<PASSWORD>"http://<HOST>:<PORT>/webhdfs/v1/<PATH>?op=OPEN
+`curl -k -i -u <DS_ID>:<PASSWORD>"http://<HOST>:<PORT>/webhdfs/v1/<PATH>?op=OPEN`
 
-Delete a File: Submit a HTTPs DELETE request
+- Delete a File: Submit a HTTPs DELETE request
 
-curl -k -i -u -X DELETE <DS_ID>:<PASSWORD>"http://<HOST>:<PORT>/webhdfs/v1/<PATH>?op=DELETE
+`curl -k -i -u -X DELETE <DS_ID>:<PASSWORD>"http://<HOST>:<PORT>/webhdfs/v1/<PATH>?op=DELETE`
 
 ## Java/Scala Client for WebHDFS REST API
 
