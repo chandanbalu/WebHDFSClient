@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaSbtSettings">
+    <option name="customLauncherEnabled" value="true" />
+    <option name="customLauncherPath" value="C:\sbt\bin\sbt-launch.jar" />
+    <option name="customVMPath" />
+    <option name="vmParameters" value="-XX:MaxPermSize=384M -Dhttp.proxyHost=web.prod.proxy.cargill.com -Dhttp.proxyPort=4200 -Dhttp.proxyUser=c795701 -Dhttp.proxyPassword=fun.tar-97 -Dhttps.proxyHost=web.prod.proxy.cargill.com -Dhttps.proxyPort=4200 -Dhttps.proxyUser=c795701 -Dhttps.proxyPassword=fun.tar-97 -Dsbt.gigahorse=false -Dsbt.repository.secure=false" />
+  </component>
+</project>

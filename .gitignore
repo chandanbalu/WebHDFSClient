@@ -1,0 +1,3 @@
+# Git ignore files and folders for WebHDFS Client
+/target
+
