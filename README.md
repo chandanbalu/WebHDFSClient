@@ -1,5 +1,5 @@
 ## Web HDFS Client
-======
+
 
 WebHDFS is a Restful endpoint that allows you to interact with HDFS directly.
 
@@ -34,44 +34,46 @@ WebHDFS provides a simple ,standard way to execute Hadoop file system operations
 
 On Windows:
 Standlone API
-Upload a file to HDFS
 
-java -cp C:\Users\c795701\WebHDFSClient\target\WebHDFSClient-1.0-SNAPSHOT-jar-with-dependencies.jar com.cargill.hdfsclient.UploadWebHDFSClient --host <HOSTNAME> --port 8443 --username <DS_ID> --password  <PASSWORD> --hdfsfile /user/<DS_ID>/test_dir/titanic.csv --localfile
-C:\\Users\\c795701\\WebHDFSClient\\src\\main\\resources\\titanic_copy.csv
+- Upload a file to HDFS
 
-Download a file from HDFS to Local Filesystem
+`java -cp C:\Users\c795701\WebHDFSClient\target\WebHDFSClient-1.0-SNAPSHOT-jar-with-dependencies.jar com.cargill.hdfsclient.UploadWebHDFSClient --host <HOSTNAME> --port 8443 --username <DS_ID> --password  <PASSWORD> --hdfsfile /user/<DS_ID>/test_dir/titanic.csv --localfile
+C:\\Users\\c795701\\WebHDFSClient\\src\\main\\resources\\titanic_copy.csv`
 
-java -cp C:\Users\c795701\WebHDFSClient\target\WebHDFSClient-1.0-SNAPSHOT-jar-with-dependencies.jar com.cargill.hdfsclient.DownloadWebHDFSClient --host <HOSTNAME> --port 8443 --username <DS_ID> --password  <PASSWORD> --hdfsfile /user/<DS_ID>/test_dir/titanic.csv --localfile
-C:\\Users\\c795701\\WebHDFSClient\\src\\main\\resources\\titanic_copy.csv
+- Download a file from HDFS to Local Filesystem
 
-List a HDFS File/Directory
+`java -cp C:\Users\c795701\WebHDFSClient\target\WebHDFSClient-1.0-SNAPSHOT-jar-with-dependencies.jar com.cargill.hdfsclient.DownloadWebHDFSClient --host <HOSTNAME> --port 8443 --username <DS_ID> --password  <PASSWORD> --hdfsfile /user/<DS_ID>/test_dir/titanic.csv --localfile
+C:\\Users\\c795701\\WebHDFSClient\\src\\main\\resources\\titanic_copy.csv`
 
-java -cp C:\Users\c795701\WebHDFSClient\target\WebHDFSClient-1.0-SNAPSHOT-jar-with-dependencies.jar com.cargill.hdfsclient.DIRStatusWebHDFSClient --host <HOSTNAME> --port 8443 --username <DS_ID> --password  <PASSWORD> --hdfsfile /user/<DS_ID>/test_dir/titanic.csv
+- List a HDFS File/Directory
 
-Delete a HDFS File/Directory
+`java -cp C:\Users\c795701\WebHDFSClient\target\WebHDFSClient-1.0-SNAPSHOT-jar-with-dependencies.jar com.cargill.hdfsclient.DIRStatusWebHDFSClient --host <HOSTNAME> --port 8443 --username <DS_ID> --password  <PASSWORD> --hdfsfile /user/<DS_ID>/test_dir/titanic.csv`
 
-java -cp C:\Users\c795701\WebHDFSClient\target\WebHDFSClient-1.0-SNAPSHOT-jar-with-dependencies.jar com.cargill.hdfsclient.DeleteDIRWebHDFSClient --host <HOSTNAME> --port 8443 --username <DS_ID> --password  <PASSWORD> --hdfsfile /user/<DS_ID>/test_dir/titanic.csv
+- Delete a HDFS File/Directory
+
+`java -cp C:\Users\c795701\WebHDFSClient\target\WebHDFSClient-1.0-SNAPSHOT-jar-with-dependencies.jar com.cargill.hdfsclient.DeleteDIRWebHDFSClient --host <HOSTNAME> --port 8443 --username <DS_ID> --password  <PASSWORD> --hdfsfile /user/<DS_ID>/test_dir/titanic.csv`
 
 Bundled API
-Download a file from HDFS to Local Filesystem
 
-java -cp C:\Users\c795701\WebHDFSClient\target\WebHDFSClient-1.0-SNAPSHOT-jar-with-dependencies.jar com.cargill.hdfsclient.HDFSClient --operation download --hdfsfile /user/<DS_ID>/test_dir/titanic.csv --localfile C:\\Users\\c795701\\WebHDFSClient\\src\\main\\resources\\titanic_copy.csv
+- Download a file from HDFS to Local Filesystem
 
-Upload a file to HDFS
+`java -cp C:\Users\c795701\WebHDFSClient\target\WebHDFSClient-1.0-SNAPSHOT-jar-with-dependencies.jar com.cargill.hdfsclient.HDFSClient --operation download --hdfsfile /user/<DS_ID>/test_dir/titanic.csv --localfile C:\\Users\\c795701\\WebHDFSClient\\src\\main\\resources\\titanic_copy.csv`
 
-java -cp C:\Users\c795701\WebHDFSClient\target\WebHDFSClient-1.0-SNAPSHOT-jar-with-dependencies.jar com.cargill.hdfsclient.HDFSClient --operation upload --hdfsfile /user/<DS_ID>/test_dir/titanic.csv --localfile C:\\Users\\c795701\\WebHDFSClient\\src\\main\\resources\\titanic_copy.csv
+- Upload a file to HDFS
 
-Create a HDFS File/Directory
+`java -cp C:\Users\c795701\WebHDFSClient\target\WebHDFSClient-1.0-SNAPSHOT-jar-with-dependencies.jar com.cargill.hdfsclient.HDFSClient --operation upload --hdfsfile /user/<DS_ID>/test_dir/titanic.csv --localfile C:\\Users\\c795701\\WebHDFSClient\\src\\main\\resources\\titanic_copy.csv`
 
-java -cp C:\Users\c795701\WebHDFSClient\target\WebHDFSClient-1.0-SNAPSHOT-jar-with-dependencies.jar com.cargill.hdfsclient.HDFSClient --operation create --hdfsfile /user/<DS_ID>/test_dir2
+- Create a HDFS File/Directory
 
-List a HDFS File/Directory
+`java -cp C:\Users\c795701\WebHDFSClient\target\WebHDFSClient-1.0-SNAPSHOT-jar-with-dependencies.jar com.cargill.hdfsclient.HDFSClient --operation create --hdfsfile /user/<DS_ID>/test_dir2`
 
-java -cp C:\Users\c795701\WebHDFSClient\target\WebHDFSClient-1.0-SNAPSHOT-jar-with-dependencies.jar com.cargill.hdfsclient.HDFSClient --operation list --hdfsfile /user/<DS_ID>/test_dir/titanic.csv
+- List a HDFS File/Directory
 
-Delete a HDFS File/Directory
+`java -cp C:\Users\c795701\WebHDFSClient\target\WebHDFSClient-1.0-SNAPSHOT-jar-with-dependencies.jar com.cargill.hdfsclient.HDFSClient --operation list --hdfsfile /user/<DS_ID>/test_dir/titanic.csv`
 
-java -cp C:\Users\c795701\WebHDFSClient\target\WebHDFSClient-1.0-SNAPSHOT-jar-with-dependencies.jar com.cargill.hdfsclient.HDFSClient --operation delete --hdfsfile /user/<DS_ID>/test_dir2
+- Delete a HDFS File/Directory
+
+`java -cp C:\Users\c795701\WebHDFSClient\target\WebHDFSClient-1.0-SNAPSHOT-jar-with-dependencies.jar com.cargill.hdfsclient.HDFSClient --operation delete --hdfsfile /user/<DS_ID>/test_dir2`
 
 On Unix or Linux platforms:
 
