@@ -1,5 +1,5 @@
 ## Web HDFS Client
-=================================
+======
 
 WebHDFS is a Restful endpoint that allows you to interact with HDFS directly.
 
